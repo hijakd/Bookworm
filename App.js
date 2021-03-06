@@ -1,16 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
 import AppButton from './app/components/AppButton';
 import AppText from './app/components/AppText';
 import AppColors from './app/configs/AppColors';
 
-
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <AppText>Hello Cactus</AppText> */}
-      <AppButton title="Click Here"></AppButton>
+      <MaterialCommunityIcons 
+        name = "library"
+        size = {68}
+        color = {AppColors.primaryColor}
+      />
     </View>
   );
 }
