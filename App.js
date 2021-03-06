@@ -8,7 +8,7 @@ import AppColors from './app/configs/AppColors';
 export default function App() {
   return (
     <View style={styles.container}>
-
+      <Text> Hello Cactus!?!</Text>
     </View>
   );
 }
