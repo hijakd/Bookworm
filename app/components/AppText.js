@@ -1,15 +1,15 @@
 import React from 'react';
-import { Text, Stylesheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 
-function AppText(children) {
+function AppText({children}) {
     return (
         <Text style={styles.text}> {children} </Text>
     );
 }
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
     text:{
-        fontsize: 20,
+        fontSize:20,
     }
 })
 
