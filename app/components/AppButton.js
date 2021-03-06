@@ -6,7 +6,7 @@ function AppButton({title}) {
     return (
         <TouchableOpacity>
             <View style={styles.button}>
-                <Text> {title} </Text>
+                <Text style={styles.text}> {title} </Text>
             </View>
         </TouchableOpacity>
     );
@@ -20,6 +20,12 @@ const styles = StyleSheet.create({
         padding: 15,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    text:{
+        color: AppColors.white,
+        fontSize: 16,
+        textTransform: 'uppercase',
+        fontWeight: 'bold',
     }
 })
 
