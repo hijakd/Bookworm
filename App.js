@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // using a defined colour palette "AppColor.js" in ./app/configs
-    backgroundColor: AppColors.primaryColor,
+    backgroundColor: AppColors.secondaryColor,
     alignItems: 'center',
     justifyContent: 'center',
   },
