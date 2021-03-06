@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import AppButton from './app/components/AppButton';
 import AppText from './app/components/AppText';
 import AppColors from './app/configs/AppColors';
 
@@ -8,7 +9,8 @@ import AppColors from './app/configs/AppColors';
 export default function App() {
   return (
     <View style={styles.container}>
-      <AppText>Hello Cactus</AppText>
+      {/* <AppText>Hello Cactus</AppText> */}
+      <AppButton title="Click Here"></AppButton>
     </View>
   );
 }
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // using a defined colour palette "AppColor.js" in ./app/configs
-    backgroundColor: AppColors.secondaryColor,
+    backgroundColor: AppColors.otherColor,
     alignItems: 'center',
     justifyContent: 'center',
   },
