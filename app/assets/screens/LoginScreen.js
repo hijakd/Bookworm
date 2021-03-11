@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
-import AppStyles from '../../components/AppStyles';
+import AppStyles from '../../configs/AppStyles';
 
 
 function LoginScreen(props) {
