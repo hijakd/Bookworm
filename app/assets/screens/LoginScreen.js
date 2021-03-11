@@ -10,7 +10,7 @@ function LoginScreen(props) {
             <AppTextInput 
                 icon="email"
                 placeholder="Email Address"
-                placeholderTextColor='black'
+                placeholderTextColor='indigo'
             />
 
         </View>
