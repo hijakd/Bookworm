@@ -10,6 +10,7 @@ function LoginScreen(props) {
             <AppTextInput 
                 icon="email"
                 placeholder="Email Address"
+                placeholderTextColor='black'
             />
 
         </View>
@@ -20,6 +21,7 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         marginTop:100,
+        
     }
 })
 
