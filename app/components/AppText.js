@@ -1,5 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet, Platform } from 'react-native';
+import AppStyles from './AppStyles';
+
 
 function AppText({children}) {
     return (
