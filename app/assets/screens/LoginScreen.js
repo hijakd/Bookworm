@@ -1,16 +1,17 @@
 import React from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
+import AppTextInput from '../../components/AppTextInput';
 import AppStyles from '../../configs/AppStyles';
 
 
 function LoginScreen(props) {
     return (
         <View style={styles.container}>
-            <TextInput
-                placeholder="cactus?"
-                secureTextEntry={true}
-                keyboardType="phone-pad"
+            <AppTextInput 
+                icon="email"
+                placeholder="Email Address"
             />
+
         </View>
     );
 }
