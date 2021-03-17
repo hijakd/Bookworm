@@ -11,7 +11,7 @@ import AppStyles from './app/assets/configs/AppStyles';
 
 export default function App() {
   return (
-    <RegisterScreen/>  
+    <LoginScreen/>  
     
 
   );

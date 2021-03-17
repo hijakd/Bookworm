@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import {Formik} from 'formik';
 
 import AppColors from '../configs/AppColors';
 import AppStyles from '../configs/AppStyles';
 import AppScreen from './AppScreen';
 import AppTextInput from '../components/AppTextInput';
 import AppButton from '../components/AppButton';
+
 
 
 function LoginScreen(props) {
@@ -22,6 +24,13 @@ function LoginScreen(props) {
                     size={68}
                     color={AppColors.primaryColor}/>
             </View>
+
+            <Formik
+                initialValues={{email:'', password:'',}}
+                onSubmit={values => console.log()}
+            >
+
+            </Formik>
             <View style={styles.textInputContainer}>
                 <AppTextInput
                     autoCapitalize= "none"

@@ -1,13 +1,12 @@
 import React, {useState} from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import {MaterialCommunityIcons} from '@expo/vector-icons'
+import {Formik} from 'formik'
 
-
-import AppTextInput from '../components/AppTextInput'
-import AppScreen from './AppScreen'
-import AppColors from '../configs/AppColors'
 import AppButton from '../components/AppButton'
-
+import AppColors from '../configs/AppColors'
+import AppScreen from './AppScreen'
+import AppTextInput from '../components/AppTextInput'
 
 
 function RegisterScreen(props) {
@@ -22,6 +21,14 @@ function RegisterScreen(props) {
                 size={68}
                 color={AppColors.primaryColor}/>
         </View>
+
+        {/* <Formik
+
+        >
+
+
+        </Formik> */}
+
         <View style={styles.textInputContainer}>
             <AppTextInput
                 autoCapitalize= "words"
