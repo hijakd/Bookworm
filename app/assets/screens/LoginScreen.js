@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import AppColors from '../../configs/AppColors';
-import AppStyles from '../../configs/AppStyles';
+import AppColors from '../configs/AppColors';
+import AppStyles from '../configs/AppStyles';
 import AppScreen from './AppScreen';
-import AppTextInput from '../../components/AppTextInput';
-import AppButton from '../../components/AppButton';
+import AppTextInput from '../components/AppTextInput';
+import AppButton from '../components/AppButton';
 
 
 function LoginScreen(props) {

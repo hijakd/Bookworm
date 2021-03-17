@@ -1,10 +1,10 @@
 import React from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {StyleSheet, Text, ImageBackground, Platform, View } from 'react-native'
-import AppText from '../../components/AppText';
+import AppText from '../components/AppText';
 import AppScreen from './AppScreen';
-import AppColors from '../../configs/AppColors';
-import AppButton from '../../components/AppButton';
+import AppColors from '../configs/AppColors';
+import AppButton from '../components/AppButton';
 
 const blurRadiusValue = Platform.OS === 'android' ? 0.7 : 5.5;
 
