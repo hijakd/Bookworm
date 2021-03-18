@@ -2,14 +2,21 @@ import React from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {Formik} from 'formik';
+import * as Yup from 'yup';
+
 
 import AppColors from '../configs/AppColors';
 import AppStyles from '../configs/AppStyles';
 import AppScreen from './AppScreen';
 import AppTextInput from '../components/AppTextInput';
 import AppButton from '../components/AppButton';
+import AppText from '../components/AppText';
 
 
+ const valSchema = Yup.object().shape({
+     email: Yup.string().required().email().label("Email"),
+     password: Yup.string().required().min(4).max(8).label("Password"),
+ });
 
 function LoginScreen(props) {
 
@@ -25,8 +32,9 @@ function LoginScreen(props) {
             <Formik
                 initialValues={{email:'', password:'',}}
                 onSubmit={values => console.log(values)}
+                validationSchema={valSchema}
             >
-            {({handleChange, handleSubmit}) => (
+            {({handleChange, handleSubmit, errors}) => (
             <>
                 <View style={styles.textInputContainer}>
                     <AppTextInput
@@ -38,6 +46,7 @@ function LoginScreen(props) {
                         textContentType= "emailAddress"
                         onChangeText= {handleChange("email")}
                     />
+                    <AppText>{errors.email}</AppText>
                     <AppTextInput
                         autoCapitalize= "none"
                         autoCorrect= {false}
@@ -46,7 +55,8 @@ function LoginScreen(props) {
                         secureTextEntry  // this sets secureTextEntry to true
                         textContentType= "password"
                         onChangeText= {handleChange("password")}
-                    />                
+                    />
+                    <AppText>{errors.password}</AppText>
                 </View>
                 <AppButton title="Login" onPress={handleSubmit}/>
             </>
