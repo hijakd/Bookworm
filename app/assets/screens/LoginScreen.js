@@ -46,7 +46,7 @@ function LoginScreen(props) {
                         textContentType= "emailAddress"
                         onChangeText= {handleChange("email")}
                     />
-                    <AppText>{errors.email}</AppText>
+                    <AppText style={{color:"red"}}>{errors.email}</AppText>
                     <AppTextInput
                         autoCapitalize= "none"
                         autoCorrect= {false}

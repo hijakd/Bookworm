@@ -3,9 +3,9 @@ import { Text, StyleSheet, Platform } from 'react-native';
 import AppStyles from '../configs/AppStyles';
 
 
-function AppText({children}) {
+function AppText({style, children}) {
     return (
-        <Text style={styles.text}> {children} </Text>
+        <Text style={[styles.text, style]}> {children} </Text>
     );
 }
 
