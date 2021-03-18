@@ -29,29 +29,33 @@ function LoginScreen(props) {
                 initialValues={{email:'', password:'',}}
                 onSubmit={values => console.log()}
             >
-
+            {({handleChange, handleSubmit}) => (
+            <>
+                <View style={styles.textInputContainer}>
+                    <AppTextInput
+                        autoCapitalize= "none"
+                        autoCorrect= {false}
+                        icon= "email"
+                        placeholder= "Email Address"
+                        keyboardType= "email-address"
+                        textContentType= "emailAddress"
+                        onChangeText= {handleChange("email")}
+                    />
+                    <AppTextInput
+                        autoCapitalize= "none"
+                        autoCorrect= {false}
+                        icon= "lock"
+                        placeholder= "Password"
+                        secureTextEntry  // this sets secureTextEntry to true
+                        textContentType= "password"
+                        onChangeText= {handleChange("password")}
+                    />                
+                </View>
+                <AppButton title="Login" onPress={handleSubmit}/>
+            </>
+            )}
             </Formik>
-            <View style={styles.textInputContainer}>
-                <AppTextInput
-                    autoCapitalize= "none"
-                    autoCorrect= {false}
-                    icon= "email"
-                    placeholder= "Email Address"
-                    keyboardType= "email-address"
-                    textContentType= "emailAddress"
-                    onChangeText= {userInput => setEmail(userInput)}
-                />
-                <AppTextInput
-                    autoCapitalize= "none"
-                    autoCorrect= {false}
-                    icon= "lock"
-                    placeholder= "Password"
-                    secureTextEntry  // this sets secureTextEntry to true
-                    textContentType= "password"
-                    onChangeText= {userInput => setPassword(userInput)}
-                />                
-            </View>
-            <AppButton title="Login" onPress={() => console.log(email, password)}/>
+            
         </AppScreen>   
     );
 }
