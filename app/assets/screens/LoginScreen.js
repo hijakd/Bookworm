@@ -46,7 +46,7 @@ function LoginScreen(props) {
                         textContentType= "emailAddress"
                         onChangeText= {handleChange("email")}
                     />
-                    <AppText style={{color:"red"}}>{errors.email}</AppText>
+                    <AppText style={{color:"red", fontSize:16}}>{errors.email}</AppText>
                     <AppTextInput
                         autoCapitalize= "none"
                         autoCorrect= {false}
@@ -56,7 +56,7 @@ function LoginScreen(props) {
                         textContentType= "password"
                         onChangeText= {handleChange("password")}
                     />
-                    <AppText>{errors.password}</AppText>
+                    <AppText style={{color:"red", fontSize:16}}>{errors.password}</AppText>
                 </View>
                 <AppButton title="Login" onPress={handleSubmit}/>
             </>
