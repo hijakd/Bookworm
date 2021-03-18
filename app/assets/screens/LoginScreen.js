@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {Formik} from 'formik';
@@ -13,9 +13,6 @@ import AppButton from '../components/AppButton';
 
 function LoginScreen(props) {
 
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-
     return (
         <AppScreen style={styles.container}>
             <View style={styles.welcomeContainer}>
@@ -27,7 +24,7 @@ function LoginScreen(props) {
 
             <Formik
                 initialValues={{email:'', password:'',}}
-                onSubmit={values => console.log()}
+                onSubmit={values => console.log(values)}
             >
             {({handleChange, handleSubmit}) => (
             <>
