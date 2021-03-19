@@ -12,7 +12,7 @@ import TestScreen from './app/assets/screens/TestScreen';
 
 export default function App() {
   return (
-    <TestScreen/>  
+    <WelcomeScreen/>  
     
 
   );
