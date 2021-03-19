@@ -7,11 +7,12 @@ import RegisterScreen from './app/assets/screens/RegisterScreen';
 import AppButton from './app/assets/components/AppButton';
 import AppScreen from './app/assets/screens/AppScreen';
 import AppStyles from './app/assets/configs/AppStyles';
+import TestScreen from './app/assets/screens/TestScreen';
 
 
 export default function App() {
   return (
-    <LoginScreen/>  
+    <TestScreen/>  
     
 
   );
