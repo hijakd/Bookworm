@@ -9,11 +9,11 @@ const AppStack = createStackNavigator();
 
 const AuthNavigator = () => (
     <AppStack.Navigator>
-        <AppStack.Screen name="Welcome" component={WelcomeScreen}/>
-        <AppStack.Screen name="Login" component={LoginScreen}/>
+        <AppStack.Screen name="Welcome" component={WelcomeScreen} options={{headerShown:false}}/>
+        <AppStack.Screen name="Login" component={LoginScreen} options={{/*title: 'Return to Hell!',*/ headerTitleStyle: {fontWeight: 'bold'}}}/>
         <AppStack.Screen name="Register" component={RegisterScreen}/>
     </AppStack.Navigator>
 
 )
 
-export default AppNavigator;
+export default AuthNavigator;

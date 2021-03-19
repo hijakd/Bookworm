@@ -46,11 +46,11 @@ const styles = StyleSheet.create({
           marginTop:50,
       },
       buttonContainer:{
-        backgroundColor: 'red',
-        marginTop: 500,
+        // backgroundColor: 'red',
+        marginTop: 350,
         marginEnd: 20,
         justifyContent:'space-between',
-        height: 200,
+        height: 150,
         width: '50%',
         alignSelf: 'flex-end',
       }

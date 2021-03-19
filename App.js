@@ -1,5 +1,6 @@
 import React from 'react';
 import {ImageBackground, StyleSheet, Text } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
 import WelcomeScreen from './app/assets/screens/WelcomeScreen';
 import LoginScreen from './app/assets/screens/LoginScreen';
@@ -8,11 +9,14 @@ import AppButton from './app/assets/components/AppButton';
 import AppScreen from './app/assets/screens/AppScreen';
 import AppStyles from './app/assets/configs/AppStyles';
 import TestScreen from './app/assets/screens/TestScreen';
+import AuthNavigator from './app/assets/navigation/AuthNavigator';
 
 
 export default function App() {
   return (
-    <WelcomeScreen/>  
+    <NavigationContainer>
+      <AuthNavigator/>
+    </NavigationContainer> 
     
 
   );
