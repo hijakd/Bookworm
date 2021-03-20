@@ -15,7 +15,7 @@ function WelcomeScreen({navigation}) {
     return (
         <AppScreen>
             <ImageBackground
-                source={require("../background.jpg")}
+                source={require("../images/background.jpg")}
                 style={styles.background}
                 blurRadius={blurRadiusValue}>
 

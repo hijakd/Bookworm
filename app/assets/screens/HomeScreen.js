@@ -16,7 +16,7 @@ function HomeScreen(props) {
             </View>
             <View style={styles.profileContainer}>
                 {/* <Text>"Blah, blah, blah..."</Text> */}
-                <AppListItem image={require("../../assets/BillyIdol.jpg")} title="Billy Idol" subtitle="Rebel Rocker"/>
+                <AppListItem image={require("../../assets/images/BillyIdol.jpg")} title="Billy Idol" subtitle="Rebel Rocker"/>
                 {/* <AppListItem title="Billy Idol" subtitle="Rebel Rocker"/> */}
             </View>
             
