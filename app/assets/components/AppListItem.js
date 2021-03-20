@@ -8,8 +8,8 @@ function AppListItem({image, title, subtitle}) {
         <View style={styles.listPanel}>
             <Image source={image} style={styles.pic}/>
             <View style={styles.textPanel}>
-                <Text>{title}</Text>
-                <Text>{subtitle}</Text>
+                <Text style={styles.textTitle}>{title}</Text>
+                <Text style={styles.textSubtitle}>{subtitle}</Text>
             </View>
         </View>
     );
@@ -24,15 +24,21 @@ const styles = StyleSheet.create({
     pic:{
         height: 75,
         width: 75,
-        borderRadius: 25,
+        borderRadius: 35,
     },
     textPanel:{
         flex: 1,
-        flexDirection: "column",
+        // flexDirection: "column",
         backgroundColor: AppColors.otherColor2,
         borderRadius: 10,
         marginLeft: 15,
         padding: 10,
+    },
+    textTitle:{
+        fontWeight:"bold",
+    },
+    textSubtitle:{
+        fontSize: 13,
     },
 })
 

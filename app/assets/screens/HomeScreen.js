@@ -4,6 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import AppScreen from './AppScreen';
 import AppColors from '../configs/AppColors';
 import AppListItem from '../components/AppListItem';
+import AppIcon from '../components/AppIcon';
 
 function HomeScreen(props) {
     return (
@@ -18,6 +19,12 @@ function HomeScreen(props) {
                 <AppListItem image={require("../../assets/images/BillyIdol.jpg")} title="Billy Idol" subtitle="Rebel Rocker"/>
             </View>
             
+            <AppIcon 
+                name="book-open-variant"
+                size= {40}
+                iconColor= "black"
+                backgroundColor= "white"
+            />
         </AppScreen>
     );
 }
