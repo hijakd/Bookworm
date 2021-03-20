@@ -15,9 +15,7 @@ function HomeScreen(props) {
                     color={AppColors.primaryColor}/>
             </View>
             <View style={styles.profileContainer}>
-                {/* <Text>"Blah, blah, blah..."</Text> */}
                 <AppListItem image={require("../../assets/images/BillyIdol.jpg")} title="Billy Idol" subtitle="Rebel Rocker"/>
-                {/* <AppListItem title="Billy Idol" subtitle="Rebel Rocker"/> */}
             </View>
             
         </AppScreen>
@@ -27,7 +25,8 @@ function HomeScreen(props) {
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:AppColors.otherColor,
+        // backgroundColor:AppColors.otherColor,
+        backgroundColor:"red",
         padding: 25, // for SafeAreaView check OS in AppScreen and pad there for iOS
     },
     welcomeContainer: {

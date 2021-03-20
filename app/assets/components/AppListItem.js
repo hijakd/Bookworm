@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import AppColors from '../configs/AppColors';
 
 
 function AppListItem({image, title, subtitle}) {
@@ -17,6 +18,8 @@ function AppListItem({image, title, subtitle}) {
 const styles = StyleSheet.create({
     listPanel:{
         flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
     },
     pic:{
         height: 75,
@@ -24,8 +27,12 @@ const styles = StyleSheet.create({
         borderRadius: 25,
     },
     textPanel:{
+        flex: 1,
         flexDirection: "column",
+        backgroundColor: AppColors.otherColor2,
+        borderRadius: 10,
         marginLeft: 15,
+        padding: 10,
     },
 })
 
