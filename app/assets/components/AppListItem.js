@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
 
-function AppListItem(image, title, subtitle) {
+function AppListItem({image, title, subtitle}) {
     return (
         <View>
             <Image source={image}/>
