@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import AppScreen from './AppScreen';
 import AppColors from '../configs/AppColors';
+import AppListItem from '../components/AppListItem';
 
 function HomeScreen(props) {
     return (
@@ -12,6 +13,9 @@ function HomeScreen(props) {
                     name="library"
                     size={68}
                     color={AppColors.primaryColor}/>
+            </View>
+            <View style={styles.profileContainer}>
+                <AppListItem image={require("../../assets/BillyIdol.jpg")} title="Billy Idol" subtitle="Rebel Rocker"/>
             </View>
             
         </AppScreen>
@@ -29,6 +33,9 @@ const styles = StyleSheet.create({
           justifyContent:'center',
           alignItems:'center',
           marginTop:50,
+      },
+      profileContainer:{
+        marginTop: 100,
       },
 })
 
