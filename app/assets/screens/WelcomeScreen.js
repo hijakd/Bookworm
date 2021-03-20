@@ -1,7 +1,7 @@
 import React from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {StyleSheet, Text, ImageBackground, Platform, View } from 'react-native'
-import {useNavigation} from '@react-navigation/native';
+// import {useNavigation} from '@react-navigation/native';
 
 import AppText from '../components/AppText';
 import AppScreen from './AppScreen';

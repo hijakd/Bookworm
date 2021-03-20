@@ -10,14 +10,16 @@ import AppScreen from './app/assets/screens/AppScreen';
 import AppStyles from './app/assets/configs/AppStyles';
 import TestScreen from './app/assets/screens/TestScreen';
 import AuthNavigator from './app/assets/navigation/AuthNavigator';
+import HomeScreen from './app/assets/screens/HomeScreen';
 
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <AuthNavigator/>
-    </NavigationContainer> 
-    
+    // <NavigationContainer>
+    //   <AuthNavigator/>
+    // </NavigationContainer> 
+
+    <HomeScreen/>
 
   );
 }

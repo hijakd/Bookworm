@@ -16,10 +16,10 @@ const AuthNavigator = () => (
             component={LoginScreen} 
             options={{/*title: 'Return to Hell!',*/ 
                 headerTitleStyle: {fontWeight: 'bold'}, 
-                headerRight: () => (<Button 
+                /*headerRight: () => (<Button 
                                         onPress={() => alert('This is a button!')}
                                         title="From Hell"
-                                    />)
+                                    />)*/
             }}
         />            
         <AppStack.Screen name="Register" component={RegisterScreen}/>
