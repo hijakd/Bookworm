@@ -63,21 +63,5 @@ function RegisterScreen(props) {
 );
 }
 
-// const styles = StyleSheet.create({
-//     container:{
-//         flex:1,
-//         backgroundColor:AppColors.otherColor,
-//         padding: 25, // for SafeAreaView check OS in AppScreen and pad there for iOS
-//     },
-//     welcomeContainer:{
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         marginTop: 50,
-//     },
-//     textInputContainer:{
-//         marginTop: 50,
-//         marginBottom: 30,
-//     }
-// })
 
 export default RegisterScreen;

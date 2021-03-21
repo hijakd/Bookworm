@@ -37,25 +37,5 @@ function WelcomeScreen({navigation}) {
     );
 }
 
-// const styles = StyleSheet.create({
-//     welcomeBackground: {
-//         flex: 1,
-//       },
-//       welcomeContainer: {
-//         //   backgroundColor: 'red',
-//           justifyContent:'center',
-//           alignItems:'center',
-//           marginTop:50,
-//       },
-//       buttonContainer:{
-//         // backgroundColor: 'red',
-//         marginTop: 350,
-//         marginEnd: 20,
-//         justifyContent:'space-between',
-//         height: 150,
-//         width: '50%',
-//         alignSelf: 'flex-end',
-//       }
-// })
 
 export default WelcomeScreen;

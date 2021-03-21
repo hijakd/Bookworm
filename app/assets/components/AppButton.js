@@ -13,21 +13,5 @@ function AppButton({title, color="primaryColor", onPress}) {
     );
 }
 
-// const styles = StyleSheet.create({
-//     button:{
-//         backgroundColor: AppColors.secondaryColor,
-//         borderRadius: 20,
-//         width: '100%',
-//         padding: 15,
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//     },
-//     buttonText:{
-//         color: AppColors.white,
-//         fontSize: 16,
-//         textTransform: 'uppercase',
-//         fontWeight: 'bold',
-//     },
-// })
 
 export default AppButton;

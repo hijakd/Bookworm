@@ -31,22 +31,5 @@ function HomeScreen(props) {
     );
 }
 
-// const styles = StyleSheet.create({
-//     outerContainer:{
-//         flex:1,
-//         // backgroundColor:AppColors.otherColor,
-//         backgroundColor:"red",
-//         padding: 25, // for SafeAreaView check OS in AppScreen and pad there for iOS
-//     },
-//     welcomeContainer: {
-//         //   backgroundColor: 'red',
-//         justifyContent:'center',
-//         alignItems:'center',
-//         marginTop:50,
-//     },
-//     profileContainer:{
-//         marginTop: 100,
-//     },
-// });
 
 export default HomeScreen;

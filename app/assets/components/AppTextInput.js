@@ -13,21 +13,5 @@ function AppTextInput({icon, ...otherProps}) {
     );
 }
 
-// const styles = StyleSheet.create({
-//     container:{
-//         backgroundColor: "lightgrey",
-//         flexDirection: "row",
-//         borderRadius: 25,
-//         padding: 10,
-//         marginVertical: 10,
-//         width: '100%',
-//     },
-//     textInput:{
-//         fontSize: 20,
-//         fontFamily: Platform.OS === 'android' ? 'Roboto' : 'Avenir-Roman',
-//         marginLeft: 10,
-//         flex: 1,
-//     }
-// })
 
 export default AppTextInput;
