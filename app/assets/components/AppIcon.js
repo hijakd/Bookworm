@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
+import AppStyles from '../configs/AppStyles';
 
 function AppIcon({name, size, iconColor, backgroundColor}) {
     return (
