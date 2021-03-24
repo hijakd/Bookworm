@@ -13,5 +13,8 @@ function AppButton({title, color="primaryColor", onPress}) {
     );
 }
 
+const styles = StyleSheet.create({
+    
+});
 
 export default AppButton;

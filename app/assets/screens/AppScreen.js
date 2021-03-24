@@ -11,5 +11,8 @@ function AppScreen({children, style}) {
   );
 }
 
+const styles = StyleSheet.create({
+    
+});
 
 export default AppScreen;

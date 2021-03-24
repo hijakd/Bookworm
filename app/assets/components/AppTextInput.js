@@ -13,5 +13,8 @@ function AppTextInput({icon, ...otherProps}) {
     );
 }
 
+const styles = StyleSheet.create({
+    
+});
 
 export default AppTextInput;

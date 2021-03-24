@@ -15,11 +15,11 @@ import HomeScreen from './app/assets/screens/HomeScreen';
 
 export default function App() {
   return (
-    // <NavigationContainer>
-    //   <AuthNavigator/>
-    // </NavigationContainer> 
+    <NavigationContainer>
+      <AuthNavigator/>
+    </NavigationContainer> 
 
-    <HomeScreen/>
+    // <HomeScreen/>
 
   );
 }

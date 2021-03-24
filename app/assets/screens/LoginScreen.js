@@ -69,5 +69,8 @@ function LoginScreen(props) {
     );
 }
 
+const styles = StyleSheet.create({
+    
+});
 
 export default LoginScreen;

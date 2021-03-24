@@ -63,5 +63,8 @@ function RegisterScreen(props) {
 );
 }
 
+const styles = StyleSheet.create({
+    
+});
 
 export default RegisterScreen;

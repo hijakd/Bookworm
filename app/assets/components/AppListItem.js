@@ -5,10 +5,11 @@ import AppText from './AppText';
 import AppStyles from '../configs/AppStyles';
 
 
-function AppListItem({image, title, subtitle}) {
+function AppListItem({image, title, subtitle, IconComponent}) {
     return (
         <View style={AppStyles.listPanel}>
-            <Image source={image} style={AppStyles.pic}/>
+            {IconComponent}
+            {image && <Image source={image} style={AppStyles.pic}/>}
             <View style={AppStyles.textPanel}>
                 <AppText style={AppStyles.textTitle}>{title}</AppText>
                 {subtitle && <AppText style={AppStyles.textSubtitle}>{subtitle}</AppText>}
@@ -17,5 +18,8 @@ function AppListItem({image, title, subtitle}) {
     );
 }
 
+const styles = StyleSheet.create({
+    
+});
 
 export default AppListItem;

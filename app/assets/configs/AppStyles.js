@@ -24,7 +24,7 @@ export default StyleSheet.create({
         padding: 25, // for SafeAreaView check OS in AppScreen and pad there for iOS
     },
     homeContainer: {
-        backgroundColor: 'blue',
+        backgroundColor: AppColors.otherColor,
         justifyContent:'center',
         alignItems:'center',
         marginTop:50,
@@ -70,13 +70,14 @@ export default StyleSheet.create({
     },
 
     //RegisterScreen
-    
+
 
     // AppListItem styles
     listPanel:{
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
+        marginBottom: 10,
     },
     pic:{
         height: 75,

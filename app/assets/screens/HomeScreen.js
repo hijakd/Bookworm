@@ -21,15 +21,21 @@ function HomeScreen(props) {
                 <AppListItem image={require("../../assets/images/BillyIdol.jpg")} title="Billy Idol" subtitle="Rebel Rocker"/>
             </View>
             
-            <AppIcon 
+            <AppListItem title="My Books" IconComponent={<AppIcon name="book-open-variant" size={50} iconColor={AppColors.otherColor2} backgroundColor={AppColors.secondaryColor}/>}/>
+            <AppListItem title="My Authors"IconComponent={<AppIcon name="account-heart" size={50} iconColor={AppColors.otherColor2} backgroundColor={AppColors.secondaryColor}/>}/>
+            
+            {/* <AppIcon 
                 name="book-open-variant"
                 size= {40}
                 iconColor= "black"
                 backgroundColor= "white"
-            />
+            /> */}
         </AppScreen>
     );
 }
 
+const styles = StyleSheet.create({
+    
+});
 
 export default HomeScreen;
