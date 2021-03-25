@@ -20,9 +20,10 @@ function HomeScreen(props) {
             <View style={AppStyles.profileContainer}>
                 <AppListItem image={require("../../assets/images/BillyIdol.jpg")} title="Billy Idol" subtitle="Rebel Rocker"/>
             </View>
-            
-            <AppListItem title="My Books" IconComponent={<AppIcon name="book-open-variant" size={50} iconColor={AppColors.otherColor2} backgroundColor={AppColors.secondaryColor}/>}/>
-            <AppListItem title="My Authors"IconComponent={<AppIcon name="account-heart" size={50} iconColor={AppColors.otherColor2} backgroundColor={AppColors.secondaryColor}/>}/>
+            <View style={AppStyles.linksContainer}>
+                <AppListItem title="My Books" IconComponent={<AppIcon name="book-open-variant" size={50} iconColor={AppColors.otherColor2} backgroundColor={AppColors.secondaryColor}/>}/>
+                <AppListItem title="My Authors"IconComponent={<AppIcon name="account-heart" size={50} iconColor={AppColors.otherColor2} backgroundColor={AppColors.secondaryColor}/>}/>
+            </View>
             
             {/* <AppIcon 
                 name="book-open-variant"

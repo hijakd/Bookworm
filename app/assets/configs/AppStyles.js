@@ -13,7 +13,7 @@ export default StyleSheet.create({
     // AppScreen styles
     screen:{
         flex:1,
-        marginTop: Constants.statusBarHeight,
+        // marginTop: Constants.statusBarHeight,
     },
     
     // HomeScreen styles
@@ -31,6 +31,13 @@ export default StyleSheet.create({
     },
     profileContainer:{
         marginTop: 100,
+    },
+    linksContainer:{
+        marginVertical:75,
+        backgroundColor:AppColors.otherColorLite,
+        height:150,
+        justifyContent:"space-around",
+        paddingLeft: 10,
     },
     
     // WelcomeScreen styles
