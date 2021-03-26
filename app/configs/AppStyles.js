@@ -1,69 +1,67 @@
-import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
-import AppColors from './AppColors';
-
+import { StyleSheet } from "react-native";
+import Constants from "expo-constants";
+import AppColors from "./AppColors";
 
 export default StyleSheet.create({
-
     // App styles
     container: {
-        backgroundColor: 'lightblue',
+        backgroundColor: "lightblue",
     },
-    
+
     // AppScreen styles
-    screen:{
-        flex:1,
-        // marginTop: Constants.statusBarHeight,
+    screen: {
+        flex: 1,
+        marginTop: Constants.statusBarHeight,
     },
-    
+
     // HomeScreen styles
-    outerContainer:{
-        flex:1,
+    outerContainer: {
+        flex: 1,
         // backgroundColor:AppColors.otherColor,
-        backgroundColor:"red",
+        backgroundColor: "red",
         padding: 25, // for SafeAreaView check OS in AppScreen and pad there for iOS
     },
     homeContainer: {
         backgroundColor: AppColors.otherColor,
-        justifyContent:'center',
-        alignItems:'center',
-        marginTop:50,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 50,
     },
-    profileContainer:{
+    profileContainer: {
         marginTop: 100,
     },
-    linksContainer:{
-        marginVertical:75,
-        backgroundColor:AppColors.otherColorLite,
-        height:150,
-        justifyContent:"space-around",
+    linksContainer: {
+        marginVertical: 75,
+        backgroundColor: AppColors.otherColorLite,
+        height: 150,
+        justifyContent: "space-around",
         paddingLeft: 10,
     },
-    
+
     // WelcomeScreen styles
     welcomeBackground: {
         flex: 1,
     },
     welcomeContainer: {
         // backgroundColor: 'red',
-        justifyContent:'center',
-        alignItems:'center',
-        marginTop:50,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 50,
     },
-    buttonContainer:{
+    buttonContainer: {
         // backgroundColor: 'red',
         marginTop: 350,
         marginEnd: 20,
-        justifyContent:'space-between',
+        justifyContent: "space-between",
         height: 150,
-        width: '50%',
-        alignSelf: 'flex-end',
+        width: "50%",
+        alignSelf: "flex-end",
     },
-    
+
     //LoginScreen
-    loginContainer:{
-        flex:1,
-        backgroundColor:AppColors.otherColor,
+    loginContainer: {
+        flex: 1,
+        backgroundColor: AppColors.otherColor,
         padding: 25, // for SafeAreaView check OS in AppScreen and pad there for iOS
     },
     // welcomeContainer:{
@@ -71,27 +69,26 @@ export default StyleSheet.create({
     //     alignItems: 'center',
     //     marginTop: 50,
     // },
-    textInputContainer:{
+    textInputContainer: {
         marginTop: 50,
         marginBottom: 30,
     },
 
     //RegisterScreen
 
-
     // AppListItem styles
-    listPanel:{
+    listPanel: {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
         marginBottom: 10,
     },
-    pic:{
+    pic: {
         height: 75,
         width: 75,
         borderRadius: 35,
     },
-    textPanel:{
+    textPanel: {
         flex: 1,
         // flexDirection: "column",
         backgroundColor: AppColors.otherColor2,
@@ -99,42 +96,42 @@ export default StyleSheet.create({
         marginLeft: 15,
         padding: 10,
     },
-    textTitle:{
-        fontWeight:"bold",
+    textTitle: {
+        fontWeight: "bold",
     },
-    textSubtitle:{
+    textSubtitle: {
         fontSize: 14,
     },
-    
+
     // AppTextInput styles
-    inputContainer:{
+    inputContainer: {
         backgroundColor: "lightgrey",
         flexDirection: "row",
         borderRadius: 25,
         padding: 10,
         marginVertical: 10,
-        width: '100%',
+        width: "100%",
     },
-    textInput:{
+    textInput: {
         fontSize: 20,
-        fontFamily: Platform.OS === 'android' ? 'Roboto' : 'Avenir-Roman',
+        fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir-Roman",
         marginLeft: 10,
         flex: 1,
     },
 
     // AppButton styles
-    button:{
+    button: {
         backgroundColor: AppColors.secondaryColor,
         borderRadius: 20,
-        width: '100%',
+        width: "100%",
         padding: 15,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
     },
-    buttonText:{
+    buttonText: {
         color: AppColors.white,
         fontSize: 16,
-        textTransform: 'uppercase',
-        fontWeight: 'bold',
+        textTransform: "uppercase",
+        fontWeight: "bold",
     },
 });

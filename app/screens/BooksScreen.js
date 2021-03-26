@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import AppCard from "../components/AppCard";
 import AppColors from "../configs/AppColors";
-import AppScreen from "./AppScreen";
+import AppScreen from "../components/AppScreen";
 
 function BooksScreen(props) {
     return (

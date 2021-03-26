@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, FlatList, View } from "react-native";
 import AppListItem from "../components/AppListItem";
 import AppColors from "../configs/AppColors";
-import AppScreen from "./AppScreen";
+import AppScreen from "../components/AppScreen";
 
 const authors = [
     {
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     },
     listSeperator: {
         width: "100%",
-        height: 2,
+        height: 1,
         backgroundColor: AppColors.secondaryColor,
         marginBottom: 10,
     },
