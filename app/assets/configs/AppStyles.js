@@ -103,7 +103,7 @@ export default StyleSheet.create({
         fontWeight:"bold",
     },
     textSubtitle:{
-        fontSize: 13,
+        fontSize: 14,
     },
     
     // AppTextInput styles
