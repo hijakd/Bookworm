@@ -23,6 +23,7 @@ const intialAuthorList = [
 // const [deletedAuthors, setDeletedAuthors] = useState("");
 
 function MyAuthorsScreen(props) {
+  const [refreshing, setRefreshing] = useState(false);
   const [authors, setAuthors] = useState(intialAuthorList);
   const handleDelete = (author) => {
     const deleted = intialAuthorList.filter((item) => item.id === author.id); // extending the lect vid to create a "recycle bin"
@@ -39,6 +40,8 @@ function MyAuthorsScreen(props) {
       <FlatList
         data={authors}
         keyExtractor={(author) => author.id.toString()}
+        refreshing={refreshing}
+        onRefresh={() => setAuthors(intialAuthorList)}
         renderItem={({ item }) => (
           <AppListItem
             title={item.name}
