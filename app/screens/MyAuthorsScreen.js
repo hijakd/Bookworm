@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, FlatList, View } from "react-native";
 import AppListItem from "../components/AppListItem";
 import AppColors from "../configs/AppColors";
 import AppScreen from "../components/AppScreen";
 import AppIcon from "../components/AppIcon";
 import AppStyles from "../configs/AppStyles";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
-const authors = [
+const intialAuthorList = [
   {
     id: 1,
     name: "Jane Harper",
@@ -19,7 +20,20 @@ const authors = [
   },
 ];
 
+// const [deletedAuthors, setDeletedAuthors] = useState("");
+
 function MyAuthorsScreen(props) {
+  const [authors, setAuthors] = useState(intialAuthorList);
+  const handleDelete = (author) => {
+    const deleted = intialAuthorList.filter((item) => item.id === author.id); // extending the lect vid to create a "recycle bin"
+    const newAuthorList = authors.filter((item) => item.id !== author.id);
+    // const deleted = (item) => item.id === author.id;
+    setAuthors(newAuthorList);
+    console.log(deleted);
+  };
+
+  // setDeletedAuthors(deleted);
+
   return (
     <AppScreen style={styles.authorContainer}>
       <FlatList
@@ -32,12 +46,14 @@ function MyAuthorsScreen(props) {
             onPress={() => console.log(item)}
             onSwipeLeft={() => (
               <View style={styles.deleteView}>
-                <AppIcon
-                  name="trash-can"
-                  size={AppStyles.pic.height * 0.75}
-                  iconColor={AppColors.otherColor}
-                  backgroundColor={AppColors.primaryColor}
-                />
+                <TouchableOpacity onPress={() => handleDelete(item)}>
+                  <AppIcon
+                    name="trash-can"
+                    size={AppStyles.pic.height * 0.75}
+                    iconColor={AppColors.otherColor}
+                    backgroundColor={AppColors.primaryColor}
+                  />
+                </TouchableOpacity>
               </View>
             )}
           />
