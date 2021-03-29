@@ -31,7 +31,7 @@ function WelcomeScreen({ navigation }) {
             size={68}
             color={AppColors.white}
           />
-          <AppText>Welcome to Bookworm</AppText>
+          <AppText style={AppStyles.welcomeText}>Welcome to Bookworm</AppText>
         </View>
         <View style={AppStyles.buttonContainer}>
           <AppButton

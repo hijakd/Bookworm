@@ -4,17 +4,18 @@ import Constants from "expo-constants";
 import AppStyles from "../configs/AppStyles";
 
 function AppScreen({ children, style }) {
-    return (
-        <SafeAreaView style={[AppStyles.screen, style]}>
-            <View style={styles.paddingView}>{children}</View>
-        </SafeAreaView>
-    );
+  return (
+    <SafeAreaView style={[AppStyles.screen, style]}>
+      <View style={styles.paddingView}>{children}</View>
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
-    paddingView: {
-        padding: 10,
-    },
+  paddingView: {
+    flex: 1,
+    // padding: 10,
+  },
 });
 
 export default AppScreen;
