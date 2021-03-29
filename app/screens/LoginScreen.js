@@ -61,7 +61,14 @@ function LoginScreen({ navigation }) {
         }}
         validationSchema={valSchema}
       >
-        {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
+        {({
+          handleChange,
+          handleSubmit,
+          errors,
+          setFieldTouched,
+          touched,
+          values,
+        }) => (
           <>
             <View style={AppStyles.textInputContainer}>
               <AppTextInput
@@ -71,6 +78,7 @@ function LoginScreen({ navigation }) {
                 placeholder="Email Address"
                 keyboardType="email-address"
                 textContentType="emailAddress"
+                value={values.email}
                 onBlur={() => setFieldTouched("email")}
                 onChangeText={handleChange("email")}
               />
@@ -86,6 +94,7 @@ function LoginScreen({ navigation }) {
                 placeholder="Password"
                 secureTextEntry // this sets secureTextEntry to true
                 textContentType="password"
+                value={values.password}
                 onBlur={() => setFieldTouched("password")}
                 onChangeText={handleChange("password")}
               />
