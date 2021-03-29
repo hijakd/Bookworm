@@ -7,10 +7,10 @@ import AppColors from "../configs/AppColors";
 
 function AppPicker({ icon, placeholder, ...otherProps }) {
   return (
-    <View style={AppStyles.inputContainer}>
-      <MaterialCommunityIcons name={icon} size={24} />
-      <TextInput style={AppStyles.textInput} {...otherProps} />
-      <AppText>{placeholder}</AppText>
+    <View style={AppStyles.pickerContainer}>
+      <MaterialCommunityIcons name={icon} size={28} />
+      <AppText style={AppStyles.pickerText}>{placeholder}</AppText>
+      <MaterialCommunityIcons name="chevron-down" size={28} />
     </View>
   );
 }

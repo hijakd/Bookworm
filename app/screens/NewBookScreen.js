@@ -9,7 +9,7 @@ import AppStyles from "../configs/AppStyles";
 function NewBookScreen(props) {
   return (
     <AppScreen style={AppStyles.outerContainer}>
-      <AppPicker placeholder="Categories" icon="select-group" />
+      <AppPicker placeholder="Categories" icon="apps" />
     </AppScreen>
   );
 }

@@ -144,4 +144,20 @@ export default StyleSheet.create({
     textTransform: "uppercase",
     fontWeight: "bold",
   },
+
+  // AppPicker styles
+  pickerContainer: {
+    backgroundColor: "lightgrey",
+    flexDirection: "row",
+    borderRadius: 25,
+    padding: 10,
+    marginVertical: 10,
+    width: "100%",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
+  pickerText: {
+    flex: 1,
+    marginLeft: 10,
+  },
 });
