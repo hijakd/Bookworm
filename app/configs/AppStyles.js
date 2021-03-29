@@ -126,6 +126,7 @@ export default StyleSheet.create({
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir-Roman",
     marginLeft: 10,
     flex: 1,
+    alignItems: "center",
   },
 
   // AppButton styles

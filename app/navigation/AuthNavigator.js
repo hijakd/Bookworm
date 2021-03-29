@@ -8,11 +8,13 @@ import RegisterScreen from "../screens/RegisterScreen";
 import HomeScreen from "../screens/HomeScreen";
 import BooksScreen from "../screens/BooksScreen";
 import MyAuthorsScreen from "../screens/MyAuthorsScreen";
+import NewBookScreen from "../screens/NewBookScreen";
 
 const AppStack = createStackNavigator();
 
 const AuthNavigator = () => (
   <AppStack.Navigator>
+    <AppStack.Screen name="New Book" component={NewBookScreen} />
     <AppStack.Screen
       name="Welcome"
       component={WelcomeScreen}
