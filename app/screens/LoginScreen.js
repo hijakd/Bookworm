@@ -16,6 +16,26 @@ const valSchema = Yup.object().shape({
   password: Yup.string().required().min(4).max(8).label("Password"),
 });
 
+const users = [
+  {
+    name: "Billy Idol",
+    email: "billy@idol.com",
+    password: "rebel",
+  },
+  {
+    name: "Jon Snow",
+    email: "js@gmail.com",
+    password: "dead",
+  },
+];
+
+const validateUser = ({ email, password }) => {
+  return (
+    users.filter((user) => user.email === email && user.password === password)
+      .length > 0
+  );
+};
+
 function LoginScreen({ navigation }) {
   return (
     <AppScreen style={AppStyles.loginContainer}>
@@ -29,9 +49,15 @@ function LoginScreen({ navigation }) {
 
       <Formik
         initialValues={{ email: "", password: "" }}
-        onSubmit={(values) => {
-          console.log(values);
-          navigation.navigate("Home");
+        onSubmit={(values, { resetForm }) => {
+          if (validateUser(values)) {
+            console.log(values);
+            resetForm();
+            navigation.navigate("Home");
+          } else {
+            resetForm();
+            alert("Invalid login details");
+          }
         }}
         validationSchema={valSchema}
       >
