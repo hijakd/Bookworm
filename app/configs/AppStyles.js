@@ -160,4 +160,11 @@ export default StyleSheet.create({
     flex: 1,
     marginLeft: 10,
   },
+  pickerItems: {
+    paddingVertical: 20,
+    paddingHorizontal: 10,
+    width: "33%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });

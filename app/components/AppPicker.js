@@ -15,8 +15,9 @@ import AppStyles from "../configs/AppStyles";
 import AppText from "./AppText";
 import AppColors from "../configs/AppColors";
 import AppScreen from "./AppScreen";
+import AppPickerItems from "./AppPickerItems";
 
-function AppPicker({ data, icon, placeholder }) {
+function AppPicker({ data, icon, placeholder, numColumns }) {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <React.Fragment>
@@ -31,9 +32,19 @@ function AppPicker({ data, icon, placeholder }) {
         <AppScreen>
           <Button title="Close" onPress={() => setModalVisible(false)} />
           <FlatList
+            numColumns={numColumns}
             data={data}
             keyExtractor={(item) => item.value.toString()}
-            renderItem={({ item }) => <AppText>{item.label}</AppText>}
+            renderItem={({ item }) => (
+              <AppPickerItems
+                onPress={() => console.log(item.label)}
+                label={item.label}
+                icon={item.icon}
+                backgroundColor={item.backgroundColor}
+              />
+            )}
+
+            // <AppText>{item.label}</AppText>}
           />
         </AppScreen>
       </Modal>
