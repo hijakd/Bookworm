@@ -11,11 +11,16 @@ import LoginScreen from "./app/screens/LoginScreen";
 import RegisterScreen from "./app/screens/RegisterScreen";
 import TestScreen from "./app/screens/TestScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
+import TabNavigator from "./app/navigation/TabNavigation";
 
 export default function App() {
   return (
+    // <NavigationContainer>
+    //   <AuthNavigator />
+    // </NavigationContainer>
+
     <NavigationContainer>
-      <AuthNavigator />
+      <TabNavigator />
     </NavigationContainer>
 
     // <HomeScreen/>

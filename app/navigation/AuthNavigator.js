@@ -14,7 +14,6 @@ const AppStack = createStackNavigator();
 
 const AuthNavigator = () => (
   <AppStack.Navigator>
-    <AppStack.Screen name="New Book" component={NewBookScreen} />
     <AppStack.Screen
       name="Welcome"
       component={WelcomeScreen}
@@ -33,13 +32,18 @@ const AuthNavigator = () => (
       }}
     />
     <AppStack.Screen name="Register" component={RegisterScreen} />
-    <AppStack.Screen name="Home" component={HomeScreen} />
+    <AppStack.Screen
+      name="Home"
+      component={HomeScreen}
+      options={{ headerShown: false }}
+    />
     <AppStack.Screen name="Books" component={BooksScreen} />
     <AppStack.Screen
       name="Authors"
       component={MyAuthorsScreen}
       options={{ headerShown: false }}
     />
+    <AppStack.Screen name="New Book" component={NewBookScreen} />
   </AppStack.Navigator>
 );
 
