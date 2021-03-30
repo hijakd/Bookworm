@@ -17,14 +17,23 @@ import AppColors from "../configs/AppColors";
 import AppScreen from "./AppScreen";
 import AppPickerItems from "./AppPickerItems";
 
-function AppPicker({ data, icon, placeholder, numColumns }) {
+function AppPicker({
+  data,
+  icon,
+  placeholder,
+  numColumns,
+  selectedItem,
+  onSelectItem,
+}) {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <React.Fragment>
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
         <View style={AppStyles.pickerContainer}>
           {icon && <MaterialCommunityIcons name={icon} size={28} />}
-          <AppText style={AppStyles.pickerText}>{placeholder}</AppText>
+          <AppText style={AppStyles.pickerText}>
+            {selectedItem ? selectedItem.label : placeholder}
+          </AppText>
           <MaterialCommunityIcons name="chevron-down" size={28} />
         </View>
       </TouchableWithoutFeedback>
@@ -37,7 +46,11 @@ function AppPicker({ data, icon, placeholder, numColumns }) {
             keyExtractor={(item) => item.value.toString()}
             renderItem={({ item }) => (
               <AppPickerItems
-                onPress={() => console.log(item.label)}
+                onPress={() => {
+                  setModalVisible(false);
+                  onSelectItem(item);
+                  console.log(item.label);
+                }}
                 label={item.label}
                 icon={item.icon}
                 backgroundColor={item.backgroundColor}
