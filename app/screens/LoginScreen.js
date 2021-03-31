@@ -50,7 +50,7 @@ const createUser = ({ email }) => {
   let userID = getUser({ email }).id;
   commonData.setUserID(userID);
 
-  console.log(commonData);
+  // console.log(commonData);
 };
 
 function LoginScreen({ navigation }) {

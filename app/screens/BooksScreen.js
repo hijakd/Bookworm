@@ -3,8 +3,16 @@ import { StyleSheet, View } from "react-native";
 import AppCard from "../components/AppCard";
 import AppColors from "../configs/AppColors";
 import AppScreen from "../components/AppScreen";
+import DataManager from "../configs/DataManager";
+
+const getBooks = () => {
+  let commonData = DataManager.getInstance();
+  let user = commonData.getUserID();
+  console.log(commonData.getBooks(user));
+};
 
 function BooksScreen(props) {
+  getBooks();
   return (
     <AppScreen style={styles.bookContainer}>
       <AppCard
