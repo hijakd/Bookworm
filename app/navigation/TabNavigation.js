@@ -12,6 +12,7 @@ import MyAuthorsScreen from "../screens/MyAuthorsScreen";
 import NewBookScreen from "../screens/NewBookScreen";
 import AppColors from "../configs/AppColors";
 import AppIcon from "../components/AppIcon";
+import HomeNavigator from "./HomeNavigator";
 
 const AppTab = createBottomTabNavigator();
 
@@ -27,7 +28,7 @@ const TabNavigator = () => (
   >
     <AppTab.Screen
       name="Home"
-      component={HomeScreen}
+      component={HomeNavigator}
       options={{ tabBarIcon: () => <AppIcon name="home" /> }}
     />
     <AppTab.Screen

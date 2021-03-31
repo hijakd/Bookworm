@@ -7,7 +7,7 @@ import AppListItem from "../components/AppListItem";
 import AppIcon from "../components/AppIcon";
 import AppStyles from "../configs/AppStyles";
 
-function HomeScreen(props) {
+function HomeScreen({ navigation }) {
   return (
     <AppScreen style={AppStyles.outerContainer}>
       <View style={AppStyles.homeContainer}>
@@ -34,6 +34,7 @@ function HomeScreen(props) {
               size={50}
               iconColor={AppColors.otherColor2}
               backgroundColor={AppColors.secondaryColor}
+              onPress={() => navigation.navigate("BookScreen")}
             />
           }
         />
@@ -45,6 +46,7 @@ function HomeScreen(props) {
               size={50}
               iconColor={AppColors.otherColor2}
               backgroundColor={AppColors.secondaryColor}
+              onPress={() => navigation.navigate("MyAuthorsScreen")}
             />
           }
         />
