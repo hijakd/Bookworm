@@ -53,7 +53,10 @@ function LoginScreen({ navigation }) {
           if (validateUser(values)) {
             console.log(values);
             resetForm();
-            navigation.navigate("Home");
+            navigation.navigate("Home", {
+              screen: "Home",
+              params: { screen: "Home", params: { message: "Hello World!!" } },
+            });
           } else {
             resetForm();
             alert("Invalid login details");
