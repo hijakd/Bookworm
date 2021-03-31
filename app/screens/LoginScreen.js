@@ -10,6 +10,7 @@ import AppScreen from "../components/AppScreen";
 import AppTextInput from "../components/AppTextInput";
 import AppButton from "../components/AppButton";
 import AppText from "../components/AppText";
+import DataManager from "../configs/DataManager";
 
 const valSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
@@ -44,6 +45,14 @@ const getUser = ({ email }) => {
   return users.find((user) => user.email === email);
 };
 
+const createUser = ({ email }) => {
+  let commonData = DataManager.getInstance();
+  let userID = getUser({ email }).id;
+  commonData.setUserID(userID);
+
+  console.log(commonData);
+};
+
 function LoginScreen({ navigation }) {
   return (
     <AppScreen style={AppStyles.loginContainer}>
@@ -61,6 +70,7 @@ function LoginScreen({ navigation }) {
           if (validateUser(values)) {
             console.log(getUser(values));
             resetForm();
+            createUser(values);
             navigation.navigate("Home", {
               screen: "Home",
               params: {
