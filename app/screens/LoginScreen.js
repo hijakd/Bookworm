@@ -39,6 +39,10 @@ const validateUser = ({ email, password }) => {
   );
 };
 
+const getUser = ({ email }) => {
+  return users.find((user) => user.email === email);
+};
+
 function LoginScreen({ navigation }) {
   return (
     <AppScreen style={AppStyles.loginContainer}>
@@ -54,7 +58,7 @@ function LoginScreen({ navigation }) {
         initialValues={{ email: "", password: "" }}
         onSubmit={(values, { resetForm }) => {
           if (validateUser(values)) {
-            console.log(values);
+            console.log(getUser(values));
             resetForm();
             navigation.navigate("Home", {
               screen: "Home",
