@@ -16,17 +16,17 @@ import TestNavigator from "./app/navigation/TestNavigator";
 
 export default function App() {
   return (
-    // <NavigationContainer>
-    //   <AuthNavigator />
-    // </NavigationContainer>
+    <NavigationContainer>
+      <AuthNavigator />
+    </NavigationContainer>
 
     // <NavigationContainer>
     //   <TabNavigator />
     // </NavigationContainer>
 
-    <NavigationContainer>
-      <TestNavigator />
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <TestNavigator />
+    // </NavigationContainer>
 
     // <HomeScreen/>
   );

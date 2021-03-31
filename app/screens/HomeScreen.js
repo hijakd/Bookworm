@@ -7,9 +7,10 @@ import AppListItem from "../components/AppListItem";
 import AppIcon from "../components/AppIcon";
 import AppStyles from "../configs/AppStyles";
 
-function HomeScreen({ navigation }) {
+function HomeScreen({ navigation, route }) {
   return (
     <AppScreen style={AppStyles.outerContainer}>
+      <Text>{route.params.message}</Text>
       <View style={AppStyles.homeContainer}>
         {/* <View style={styles.welcomeContainer}> */}
         <MaterialCommunityIcons
