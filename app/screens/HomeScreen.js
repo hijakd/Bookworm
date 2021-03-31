@@ -10,7 +10,6 @@ import AppStyles from "../configs/AppStyles";
 function HomeScreen({ navigation, route }) {
   return (
     <AppScreen style={AppStyles.outerContainer}>
-      <Text>{route.params.message}</Text>
       <View style={AppStyles.homeContainer}>
         {/* <View style={styles.welcomeContainer}> */}
         <MaterialCommunityIcons
@@ -23,7 +22,7 @@ function HomeScreen({ navigation, route }) {
         <AppListItem
           image={require("../assets/images/BillyIdol.jpg")}
           title="Billy Idol"
-          subtitle="Rebel Rocker"
+          subtitle={route.params.paramEmail}
         />
       </View>
       <View style={AppStyles.linksContainer}>

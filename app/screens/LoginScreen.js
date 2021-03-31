@@ -18,11 +18,14 @@ const valSchema = Yup.object().shape({
 
 const users = [
   {
+    id: "user1",
     name: "Billy Idol",
     email: "billy@idol.com",
     password: "rebel",
+    image: require("../assets/images/BillyIdol.jpg"),
   },
   {
+    id: "user2",
     name: "Jon Snow",
     email: "js@gmail.com",
     password: "dead",
@@ -55,7 +58,7 @@ function LoginScreen({ navigation }) {
             resetForm();
             navigation.navigate("Home", {
               screen: "Home",
-              params: { screen: "Home", params: { message: "Hello World!!" } },
+              params: { screen: "Home", params: { paramEmail: values.email } },
             });
           } else {
             resetForm();
