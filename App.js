@@ -15,13 +15,13 @@ import TabNavigator from "./app/navigation/TabNavigation";
 
 export default function App() {
   return (
-    // <NavigationContainer>
-    //   <AuthNavigator />
-    // </NavigationContainer>
-
     <NavigationContainer>
-      <TabNavigator />
+      <AuthNavigator />
     </NavigationContainer>
+
+    // <NavigationContainer>
+    //   <TabNavigator />
+    // </NavigationContainer>
 
     // <HomeScreen/>
   );
