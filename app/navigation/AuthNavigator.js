@@ -36,13 +36,13 @@ const AuthNavigator = () => (
     <AppStack.Screen
       name="Home"
       component={TabNavigator}
-      options={{ headerShown: false }}
+      // options={{ headerShown: false }}
     />
     <AppStack.Screen name="Books" component={BooksScreen} />
     <AppStack.Screen
       name="Authors"
       component={MyAuthorsScreen}
-      options={{ headerShown: false }}
+      // options={{ headerShown: false }}
     />
     <AppStack.Screen name="New Book" component={NewBookScreen} />
   </AppStack.Navigator>
