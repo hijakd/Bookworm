@@ -20,8 +20,8 @@ function HomeScreen({ navigation, route }) {
       </View>
       <View style={AppStyles.profileContainer}>
         <AppListItem
-          image={require("../assets/images/BillyIdol.jpg")}
-          title="Billy Idol"
+          image={route.params.paramImage}
+          title={route.params.paramName}
           subtitle={route.params.paramEmail}
         />
       </View>

@@ -29,6 +29,7 @@ const users = [
     name: "Jon Snow",
     email: "js@gmail.com",
     password: "dead",
+    image: require("../assets/images/JonSnow8x06.png"),
   },
 ];
 
@@ -62,7 +63,14 @@ function LoginScreen({ navigation }) {
             resetForm();
             navigation.navigate("Home", {
               screen: "Home",
-              params: { screen: "Home", params: { paramEmail: values.email } },
+              params: {
+                screen: "Home",
+                params: {
+                  paramEmail: values.email,
+                  paramName: getUser(values).name,
+                  paramImage: getUser(values).image,
+                },
+              },
             });
           } else {
             resetForm();
