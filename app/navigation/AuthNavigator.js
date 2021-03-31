@@ -9,6 +9,7 @@ import HomeScreen from "../screens/HomeScreen";
 import BooksScreen from "../screens/BooksScreen";
 import MyAuthorsScreen from "../screens/MyAuthorsScreen";
 import NewBookScreen from "../screens/NewBookScreen";
+import TabNavigator from "./TabNavigation";
 
 const AppStack = createStackNavigator();
 
@@ -34,7 +35,7 @@ const AuthNavigator = () => (
     <AppStack.Screen name="Register" component={RegisterScreen} />
     <AppStack.Screen
       name="Home"
-      component={HomeScreen}
+      component={TabNavigator}
       options={{ headerShown: false }}
     />
     <AppStack.Screen name="Books" component={BooksScreen} />

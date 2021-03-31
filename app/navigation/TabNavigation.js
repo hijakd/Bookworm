@@ -11,6 +11,7 @@ import BooksScreen from "../screens/BooksScreen";
 import MyAuthorsScreen from "../screens/MyAuthorsScreen";
 import NewBookScreen from "../screens/NewBookScreen";
 import AppColors from "../configs/AppColors";
+import AppIcon from "../components/AppIcon";
 
 const AppTab = createBottomTabNavigator();
 
@@ -21,12 +22,24 @@ const TabNavigator = () => (
       activeBackgroundColor: AppColors.primaryColor,
       inactiveTintColor: "gray",
       inactiveBackgroundColor: AppColors.secondaryColor,
-      labelStyle: { fontSize: 20 },
+      labelStyle: { fontSize: 18 },
     }}
   >
-    <AppTab.Screen name="Home" component={HomeScreen} />
-    <AppTab.Screen name="New Books" component={NewBookScreen} />
-    <AppTab.Screen name="My Books" component={BooksScreen} />
+    <AppTab.Screen
+      name="Home"
+      component={HomeScreen}
+      options={{ tabBarIcon: () => <AppIcon name="home" /> }}
+    />
+    <AppTab.Screen
+      name="New Books"
+      component={NewBookScreen}
+      options={{ tabBarIcon: () => <AppIcon name="book-plus" /> }}
+    />
+    <AppTab.Screen
+      name="My Books"
+      component={BooksScreen}
+      options={{ tabBarIcon: () => <AppIcon name="book-open-variant" /> }}
+    />
   </AppTab.Navigator>
 );
 
