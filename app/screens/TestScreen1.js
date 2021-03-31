@@ -5,7 +5,12 @@ export default function Test1({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>Test1</Text>
-      <Button title="Click Here" onPress={() => navigation.navigate("Test2")} />
+      <Button
+        title="Click Here"
+        onPress={() =>
+          navigation.navigate("Test2", { message: "Hello World!!" })
+        }
+      />
     </View>
   );
 }
@@ -13,6 +18,6 @@ export default function Test1({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 100,
+    marginTop: 10,
   },
 });
