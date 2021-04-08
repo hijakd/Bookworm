@@ -1,8 +1,10 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
+import AppButton from "../components/AppButton";
 
 import AppPicker from "../components/AppPicker";
 import AppScreen from "../components/AppScreen";
+import AppTextInput from "../components/AppTextInput";
 import AppColors from "../configs/AppColors";
 import AppStyles from "../configs/AppStyles";
 
@@ -31,12 +33,22 @@ const genres = [
 function NewBookScreen(props) {
   return (
     <AppScreen style={AppStyles.outerContainer}>
+      <AppTextInput 
+        icon="book-open-page-variant"
+        placeholder="Book Title"
+        />
+      <AppTextInput 
+        icon="calendar-month"
+        placeholder="Book Read on:"
+        />
+
       <AppPicker
         data={genres}
         placeholder="Categories"
         icon="apps"
         numColumns={3}
       />
+      <AppButton title="Add Book" onPress={() => console.log(category.label)}/>
     </AppScreen>
   );
 }
