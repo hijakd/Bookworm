@@ -8,11 +8,13 @@ import DataManager from "../configs/DataManager";
 const getBooks = () => {
   let commonData = DataManager.getInstance();
   let user = commonData.getUserID();
-  console.log(commonData.getBooks(user));
+  return commonData.getBooks(user);
 }
 
 function BooksScreen(props) {
-  getBooks();
+  const bookList = getBooks();
+  console.log(bookList);
+  
   return (
     <AppScreen style={styles.bookContainer}>
       <AppCard
