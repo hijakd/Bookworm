@@ -42,6 +42,8 @@ function NewBookScreen(props) {
 
   const doErrorCheck = () => {
     setTitleError(title.length > 0 ? "" : "Please set a valid Book Title");
+    setSubTitleError(subTitle.length > 0 ? "" : "Please set a valid subtitle");
+    setCategoryError(category? "" : "Please select a category");
   }
 
   return (
@@ -59,6 +61,7 @@ function NewBookScreen(props) {
         value={subTitle}
         onChangeText={() => setSubTitle(inputText)}
         />
+        {subTitleError.length > 0 ? <AppText style={{margin:5, color:"red", fontSize:16}}>{subTitleError}</AppText> : <></>}
 
       <AppPicker
         data={genres}
@@ -68,6 +71,7 @@ function NewBookScreen(props) {
         icon="apps"
         numColumns={3}
       />
+      {categoryError.length > 0 ? <AppText style={{margin:5, color:"red", fontSize:16}}>{categoryError}</AppText> : <></>}
       <AppButton title="Add Book" onPress={() => doErrorCheck()}/>
     </AppScreen>
   );
