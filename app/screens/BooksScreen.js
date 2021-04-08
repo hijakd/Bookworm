@@ -23,12 +23,13 @@ function BooksScreen(props) {
       <FlatList 
         data={bookList}
         keyExtractor= {book => book.bookid.toString()}
-        renderItem= {({item}) => <AppText>{item.title}</AppText>}
-      />
-      <AppCard
-        title="Harry Potter"
-        subtitle="read on the train"
-        image={require("../assets/images/Book2Cover.jpeg")}
+        renderItem= {({item}) => 
+          <AppCard 
+            title={item.title}
+            subtitle={item.subtitle}
+            image={item.image}
+            category={item.category}
+          />}
       />
     </AppScreen>
   );
