@@ -5,6 +5,7 @@ import AppButton from "../components/AppButton";
 
 import AppPicker from "../components/AppPicker";
 import AppScreen from "../components/AppScreen";
+import AppText from "../components/AppText";
 import AppTextInput from "../components/AppTextInput";
 import AppColors from "../configs/AppColors";
 import AppStyles from "../configs/AppStyles";
@@ -35,6 +36,13 @@ function NewBookScreen(props) {
   const [title, setTitle] = useState("");
   const [subTitle, setSubTitle] = useState("");
   const [category, setCategory] = useState("");
+  const [titleError, setTitleError] = useState("");
+  const [subTitleError, setSubTitleError] = useState("");
+  const [categoryError, setCategoryError] = useState("");
+
+  const doErrorCheck = () => {
+    setTitleError(title.length > 0 ? "" : "Please set a valid Book Title");
+  }
 
   return (
     <AppScreen style={AppStyles.outerContainer}>
@@ -44,6 +52,7 @@ function NewBookScreen(props) {
         value={title}
         onChangeText={() => setTitle(inputText)}
         />
+        {titleError.length > 0 ? <AppText style={{margin:5, color:"red", fontSize:16}}>{titleError}</AppText> : <></>}
       <AppTextInput 
         icon="calendar-month"
         placeholder="Book Read on:"
@@ -59,7 +68,7 @@ function NewBookScreen(props) {
         icon="apps"
         numColumns={3}
       />
-      <AppButton title="Add Book" onPress={() => console.log(title, subtitle, category.label)}/>
+      <AppButton title="Add Book" onPress={() => doErrorCheck()}/>
     </AppScreen>
   );
 }
