@@ -9,24 +9,14 @@ import AppStyles from "./app/configs/AppStyles";
 import HomeScreen from "./app/screens/HomeScreen";
 import LoginScreen from "./app/screens/LoginScreen";
 import RegisterScreen from "./app/screens/RegisterScreen";
-import TestScreen from "./app/screens/TestScreen1";
+import TestScreen from "./app/screens/TestScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
-import TabNavigator from "./app/navigation/TabNavigation";
-import TestNavigator from "./app/navigation/TestNavigator";
 
 export default function App() {
   return (
     <NavigationContainer>
       <AuthNavigator />
     </NavigationContainer>
-
-    // <NavigationContainer>
-    //   <TabNavigator />
-    // </NavigationContainer>
-
-    // <NavigationContainer>
-    //   <TestNavigator />
-    // </NavigationContainer>
 
     // <HomeScreen/>
   );

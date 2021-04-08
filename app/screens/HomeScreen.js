@@ -7,7 +7,7 @@ import AppListItem from "../components/AppListItem";
 import AppIcon from "../components/AppIcon";
 import AppStyles from "../configs/AppStyles";
 
-function HomeScreen({ navigation, route }) {
+function HomeScreen(props) {
   return (
     <AppScreen style={AppStyles.outerContainer}>
       <View style={AppStyles.homeContainer}>
@@ -20,9 +20,9 @@ function HomeScreen({ navigation, route }) {
       </View>
       <View style={AppStyles.profileContainer}>
         <AppListItem
-          image={route.params.paramImage}
-          title={route.params.paramName}
-          subtitle={route.params.paramEmail}
+          image={require("../assets/images/BillyIdol.jpg")}
+          title="Billy Idol"
+          subtitle="Rebel Rocker"
         />
       </View>
       <View style={AppStyles.linksContainer}>
@@ -34,7 +34,6 @@ function HomeScreen({ navigation, route }) {
               size={50}
               iconColor={AppColors.otherColor2}
               backgroundColor={AppColors.secondaryColor}
-              onPress={() => navigation.navigate("BookScreen")}
             />
           }
         />
@@ -46,7 +45,6 @@ function HomeScreen({ navigation, route }) {
               size={50}
               iconColor={AppColors.otherColor2}
               backgroundColor={AppColors.secondaryColor}
-              onPress={() => navigation.navigate("MyAuthorsScreen")}
             />
           }
         />

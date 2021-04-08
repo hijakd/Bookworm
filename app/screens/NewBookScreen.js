@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { StyleSheet, View } from "react-native";
 
 import AppPicker from "../components/AppPicker";
@@ -29,13 +29,9 @@ const genres = [
 ];
 
 function NewBookScreen(props) {
-  const [genre, setGenre] = useState();
-
   return (
     <AppScreen style={AppStyles.outerContainer}>
       <AppPicker
-        selectedItem={genre}
-        onSelectItem={(item) => setGenre(item)}
         data={genres}
         placeholder="Categories"
         icon="apps"

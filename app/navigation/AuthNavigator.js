@@ -9,12 +9,12 @@ import HomeScreen from "../screens/HomeScreen";
 import BooksScreen from "../screens/BooksScreen";
 import MyAuthorsScreen from "../screens/MyAuthorsScreen";
 import NewBookScreen from "../screens/NewBookScreen";
-import TabNavigator from "./TabNavigation";
 
 const AppStack = createStackNavigator();
 
 const AuthNavigator = () => (
   <AppStack.Navigator>
+    <AppStack.Screen name="New Book" component={NewBookScreen} />
     <AppStack.Screen
       name="Welcome"
       component={WelcomeScreen}
@@ -33,18 +33,13 @@ const AuthNavigator = () => (
       }}
     />
     <AppStack.Screen name="Register" component={RegisterScreen} />
-    <AppStack.Screen
-      name="Home"
-      component={TabNavigator}
-      // options={{ headerShown: false }}
-    />
+    <AppStack.Screen name="Home" component={HomeScreen} />
     <AppStack.Screen name="Books" component={BooksScreen} />
     <AppStack.Screen
       name="Authors"
       component={MyAuthorsScreen}
-      // options={{ headerShown: false }}
+      options={{ headerShown: false }}
     />
-    <AppStack.Screen name="New Book" component={NewBookScreen} />
   </AppStack.Navigator>
 );
 

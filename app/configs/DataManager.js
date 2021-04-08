@@ -40,11 +40,11 @@ export default class DataManager {
     return this.userID;
   }
 
-  setUserID(id) {
-    this.userID = id;
-  }
-
   getBooks(id) {
     return this.books.filter((book) => book.userid === id);
+  }
+
+  setUserID(id) {
+    this.userID = id;
   }
 }
