@@ -6,7 +6,7 @@ import AppColors from '../configs/AppColors';
 function AppCard({title, subtitle, image, category}) {
     return (
         <View style={styles.cardContainer}>
-            <Image source={image} style={styles.cardImage}/>
+            {isFinite(image)? <Image source={image} style={styles.cardImage}/> : <Image source={{uri: image}} style={styles.cardImage}/>}
             <Text style={styles.cardText}>{title}</Text>
             <Text style={styles.cardSubText}>{subtitle}</Text>
             <Text style={styles.cardSubText}>{category}</Text>

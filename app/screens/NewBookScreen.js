@@ -87,6 +87,7 @@ function NewBookScreen({navigation}) {
       category: category.label,
       bookid: bookID,
       userid: user,
+      image: image.path,
     };
 
     console.log(newBook);
@@ -130,8 +131,8 @@ function NewBookScreen({navigation}) {
 
       <AppButton title="Add Book" onPress={() => {
           if (doErrorCheck()){
-            // addBook();
-            // navigation.navigator("BookScreen"); 
+            addBook();
+            navigation.navigator("BookScreen"); 
           }
         } 
       }/>
