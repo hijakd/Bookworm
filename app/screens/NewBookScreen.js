@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
 import * as ImagePicker from 'expo-image-picker';
 import AppButton from "../components/AppButton";
 
@@ -11,6 +11,7 @@ import AppTextInput from "../components/AppTextInput";
 import AppColors from "../configs/AppColors";
 import AppStyles from "../configs/AppStyles";
 import DataManager from "../configs/DataManager";
+import AppIcon from "../components/AppIcon";
 
 const genres = [
   {
@@ -38,9 +39,13 @@ function NewBookScreen({navigation}) {
   const [title, setTitle] = useState("");
   const [subTitle, setSubTitle] = useState("");
   const [category, setCategory] = useState("");
+  const [image, setImage] = useState(null);
+
   const [titleError, setTitleError] = useState("");
   const [subTitleError, setSubTitleError] = useState("");
   const [categoryError, setCategoryError] = useState("");
+  const [imageError, setImageError] = useState("");
+  
 
   let openImagePickerAsync = async () => {
     let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -52,6 +57,13 @@ function NewBookScreen({navigation}) {
 
     let pickerResult = await ImagePicker.launchImageLibraryAsync();
     console.log(pickerResult);
+
+    if (pickerResult.cancelled === true) {
+      return;
+    }
+
+    setImage({path: pickerResult.uri});
+    console.log(pickerResult);
   }
   
 
@@ -59,7 +71,8 @@ function NewBookScreen({navigation}) {
     setTitleError(title.length > 0 ? "" : "Please set a valid Book Title");
     setSubTitleError(subTitle.length > 0 ? "" : "Please set a valid subtitle");
     setCategoryError(category? "" : "Please select a category");
-    return ((title.length>0) && (subTitle.length>0) && (category)? true : false);
+    setImageError(image? "" : "Please select an Image");
+    return ((title.length>0) && (subTitle.length>0) && (category) && (image)? true : false);
   }
 
   const addBook = () => {
@@ -107,10 +120,33 @@ function NewBookScreen({navigation}) {
         numColumns={3}
       />
       {categoryError.length > 0 ? <AppText style={{margin:5, color:"red", fontSize:16}}>{categoryError}</AppText> : <></>}
-      <AppButton title="Add Book" onPress={openImagePickerAsync}/>
+      
+      <TouchableOpacity style={styles.iconButton} onPress={openImagePickerAsync}>
+        <AppIcon name="camera" size={80} color={AppColors.otherColor} backgroundColor={AppColors.primaryColor}/>
+        {image && <Image source={{uri: image.path}} style={{height: 100, width: 100, marginLeft: 20,}}/>}
+      </TouchableOpacity>
+      
+      {imageError.length > 0 ? <AppText style={{margin:5, color:"red", fontSize:16}}>{imageError}</AppText> : <></>}
+
+      <AppButton title="Add Book" onPress={() => {
+          if (doErrorCheck()){
+            // addBook();
+            // navigation.navigator("BookScreen"); 
+          }
+        } 
+      }/>
+
+      {/* <AppButton title="Add Book" onPress={openImagePickerAsync}/> */}
     </AppScreen>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  iconButton:{
+    justifyContent: "center",
+    alignItems:"center",
+    flexDirection: "row",
+    marginBottom: 30,
+  }
+});
 export default NewBookScreen;
