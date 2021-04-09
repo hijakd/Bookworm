@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
+import * as ImagePicker from 'expo-image-picker';
 import AppButton from "../components/AppButton";
 
 import AppPicker from "../components/AppPicker";
@@ -40,6 +41,19 @@ function NewBookScreen({navigation}) {
   const [titleError, setTitleError] = useState("");
   const [subTitleError, setSubTitleError] = useState("");
   const [categoryError, setCategoryError] = useState("");
+
+  let openImagePickerAsync = async () => {
+    let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
+
+    if (permissionResult.granted === false) {
+      alert("Permission to access camera roll is required!");
+      return;
+    }
+
+    let pickerResult = await ImagePicker.launchImageLibraryAsync();
+    console.log(pickerResult);
+  }
+  
 
   const doErrorCheck = () => {
     setTitleError(title.length > 0 ? "" : "Please set a valid Book Title");
@@ -93,14 +107,7 @@ function NewBookScreen({navigation}) {
         numColumns={3}
       />
       {categoryError.length > 0 ? <AppText style={{margin:5, color:"red", fontSize:16}}>{categoryError}</AppText> : <></>}
-      <AppButton title="Add Book" onPress={() => {
-          if (doErrorCheck()){
-            addBook();
-            navigation.navigator("BookScreen");
-          }
-        }
-        
-        }/>
+      <AppButton title="Add Book" onPress={openImagePickerAsync}/>
     </AppScreen>
   );
 }
