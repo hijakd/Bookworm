@@ -47,4 +47,8 @@ export default class DataManager {
   setUserID(id) {
     this.userID = id;
   }
+
+  addBook(book){
+    this.books.push(book);
+  }
 }

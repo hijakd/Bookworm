@@ -9,6 +9,7 @@ import AppText from "../components/AppText";
 import AppTextInput from "../components/AppTextInput";
 import AppColors from "../configs/AppColors";
 import AppStyles from "../configs/AppStyles";
+import DataManager from "../configs/DataManager";
 
 const genres = [
   {
@@ -32,7 +33,7 @@ const genres = [
   { label: "Thriller", value: 24, icon: "owl", backgroundColor: "brown" },
 ];
 
-function NewBookScreen(props) {
+function NewBookScreen({navigation}) {
   const [title, setTitle] = useState("");
   const [subTitle, setSubTitle] = useState("");
   const [category, setCategory] = useState("");
@@ -44,6 +45,26 @@ function NewBookScreen(props) {
     setTitleError(title.length > 0 ? "" : "Please set a valid Book Title");
     setSubTitleError(subTitle.length > 0 ? "" : "Please set a valid subtitle");
     setCategoryError(category? "" : "Please select a category");
+    return ((title.length>0) && (subTitle.length>0) && (category)? true : false);
+  }
+
+  const addBook = () => {
+    let commonData = DataManager.getInstance();
+    let user = commonData.getUserID();
+
+    const books = commonData.getBooks(user);
+    const bookID = books.length+1;
+    const newBook = {
+      title: title,
+      subtitle: subTitle,
+      category: category.label,
+      bookid: bookID,
+      userid: user,
+    };
+
+    console.log(newBook);
+
+    commonData.addBook(newBook);
   }
 
   return (
@@ -72,7 +93,14 @@ function NewBookScreen(props) {
         numColumns={3}
       />
       {categoryError.length > 0 ? <AppText style={{margin:5, color:"red", fontSize:16}}>{categoryError}</AppText> : <></>}
-      <AppButton title="Add Book" onPress={() => doErrorCheck()}/>
+      <AppButton title="Add Book" onPress={() => {
+          if (doErrorCheck()){
+            addBook();
+            navigation.navigator("BookScreen");
+          }
+        }
+        
+        }/>
     </AppScreen>
   );
 }
